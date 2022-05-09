@@ -1,29 +1,37 @@
 module.exports = {
   root: true,
-  parser: "@typescript-eslint/parser", // Specifies the ESLint parser
+  parser: '@typescript-eslint/parser', // Specifies the ESLint parser
   parserOptions: {
     ecmaVersion: 2020, // Allows for the parsing of modern ECMAScript features
-    sourceType: "module", // Allows for the use of imports
-    ecmaFeatures: {},
+    sourceType: 'module', // Allows for the use of imports
+    ecmaFeatures: {}
   },
   env: {
     node: true,
     es6: true,
-    jest: true,
+    jest: true
   },
-  plugins: ["@typescript-eslint"],
+  plugins: ['@typescript-eslint'],
   extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended'
   ],
   rules: {
-    "@typescript-eslint/explicit-module-boundary-types": "error",
-    "@typescript-eslint/no-explicit-any": "error",
+    '@typescript-eslint/explicit-module-boundary-types': 'error',
+    '@typescript-eslint/no-explicit-any': 'error',
+    'prettier/prettier': [
+      'warn',
+      {
+        singleQuote: true,
+        semi: false,
+        trailingComma: 'none'
+      }
+    ]
   },
   overrides: [
     {
-      files: ["**/*.ts", "**/*.js"],
-    },
-  ],
-};
+      files: ['**/*.ts', '**/*.js'],
+    }
+  ]
+}
