@@ -1,9 +1,9 @@
 export class FeatureFlag {
-    key: string
-    percentagePermitted: number;
+  key: string
+  percentagePermitted: number
 
-    constructor(key: string, percentagePermitted: number = 100) {
-        this.key = key;
-        this.percentagePermitted = percentagePermitted
-    }
+  constructor(key: string, percentagePermitted = 100) {
+    this.key = key
+    this.percentagePermitted = percentagePermitted
+  }
 }

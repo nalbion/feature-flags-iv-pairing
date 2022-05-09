@@ -1,10 +1,9 @@
-import {FeatureFlag} from "../domain/FeatureFlag";
+import { FeatureFlag } from '../domain/FeatureFlag'
 
 export interface FeatureFlagService {
+  permitUser(userId: string, feature: FeatureFlag): void
 
-    permitUser(userId: string, feature: FeatureFlag): void
+  isUserPermitted(userId: string, feature: FeatureFlag): boolean
 
-    isUserPermitted(userId: string, feature: FeatureFlag): boolean
-
-    getPermittedUsers(feature: FeatureFlag): string[]
+  getPermittedUsers(feature: FeatureFlag): string[]
 }
